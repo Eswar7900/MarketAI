@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Pitch</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>🚀 MarketAI Suite</h2>
+</div>
+
+<div class="form-container">
+    <h2>🎤 Sales Pitch Generator</h2>
+
+    <input type="text" id="salesProduct" placeholder="Enter Product Name">
+    <button onclick="generateSales()">Generate Sales Pitch</button>
+
+    <div class="result-box">
+        <p id="salesResult"></p>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

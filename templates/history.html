@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>📜 History</h2>
+</div>
+
+<div class="container">
+    <h2>Saved AI Results</h2>
+
+    {% if records %}
+        {% for record in records %}
+            <div class="result-box">
+                <h3>{{ record[1] | upper }}</h3>
+                <p><strong>Input:</strong> {{ record[2] }}</p>
+                <p><strong>Result:</strong></p>
+                <pre style="white-space: pre-wrap;">{{ record[3] }}</pre>
+                <small>{{ record[4] }}</small>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No history found.</p>
+    {% endif %}
+</div>
+
+</body>
+</html>

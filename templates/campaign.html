@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Campaign Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>🚀 MarketAI Suite</h2>
+</div>
+
+<div class="form-container">
+    <h2>📢 Marketing Campaign Generator</h2>
+
+    <input type="text" id="product" placeholder="Enter Product Name">
+
+    <button onclick="generateCampaign()">Generate Campaign</button>
+
+    <div class="result-box">
+        <h3>Result:</h3>
+        <p id="result"></p>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

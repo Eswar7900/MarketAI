@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lead Scoring</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>🚀 MarketAI Suite</h2>
+</div>
+
+<div class="form-container">
+    <h2>📊 Lead Scoring</h2>
+
+    <input type="text" id="leadName" placeholder="Enter Lead Name">
+    <button onclick="scoreLead()">Score Lead</button>
+
+    <div class="result-box">
+        <p id="leadResult"></p>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
